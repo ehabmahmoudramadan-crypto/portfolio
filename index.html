@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EHAB MAHMOUD </title>
+  <meta name="description" content="EHAB MAHMOUD — Frontend Developer building modern, fast, interactive and polished web experiences. React, TypeScript, Next.js, Tailwind CSS.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23FF4A3D' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var _l = localStorage.getItem('ehab-lang');
+      if (_l === 'ar') {
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <div class="frame" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span class="cursor-ring"></span>
+    <span class="cursor-label">VIEW ↗</span>
+  </div>
+
+  <a class="skip-link" href="#hero" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#hero" data-magnetic aria-label="EHAB — back to top">
+      <span class="brand-tag">&lt;</span> EHAB <span class="brand-slash">/</span> <span class="brand-tag">&gt;</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#hero" class="is-active" data-i18n="nav-home">Home</a>
+      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#projects" data-i18n="nav-projects">Projects</a>
+      <a href="#skills" data-i18n="nav-skills">Skills</a>
+      <a href="#journey" data-i18n="nav-journey">Journey</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn lang" type="button" data-i18n-title="lang-title" data-i18n-aria="lang-aria">
+        <span class="lang-current">AR</span>
+      </button>
+      <button class="icon-btn sound" id="soundToggle" type="button" aria-pressed="false" aria-label="Toggle subtle sound effects">
+        <span class="sound-glyph" aria-hidden="true">◌</span>
+      </button>
+      <button class="icon-btn theme" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-sun" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg></span>
+        <span class="theme-moon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 13.5A8 8 0 0 1 10.5 4a8 8 0 1 0 9.5 9.5Z"/></svg></span>
+      </button>
+      <a class="nav-cta" href="#contact" data-magnetic data-i18n="nav-talk">Let's talk <span aria-hidden="true">↗</span></a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mob-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#hero" data-i18n="nav-home">Home</a>
+      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#projects" data-i18n="nav-projects">Projects</a>
+      <a href="#skills" data-i18n="nav-skills">Skills</a>
+      <a href="#journey" data-i18n="nav-journey">Journey</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+    </nav>
+    <div class="mob-foot">
+      <a href="mailto:ehabmahmoudramadan@gmail.com">ehabmahmoudramadan@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ehab-mahmoud-web" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span data-i18n="foot-city">CAIRO / EGYPT</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="hero" id="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal><span class="dot"></span> <span data-i18n="hero-eyebrow">Frontend developer</span></p>
+
+        <h1 class="hero-title">
+          <span class="line" data-reveal><span class="line-in">EHAB</span></span>
+          <span class="line" data-reveal style="--d:.09s"><span class="line-in ghost">MAHMOUD</span></span>
+        </h1>
+
+        <p class="hero-desc" data-reveal style="--d:.16s" data-i18n="hero-desc">I build modern, fast and interactive web experiences that turn ideas into useful digital products.</p>
+
+        <div class="hero-cta" data-reveal style="--d:.22s">
+          <a class="btn btn-solid" href="#projects" data-magnetic data-i18n="hero-cta-work">View my work <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#contact" data-magnetic data-i18n="hero-talk">Let's talk <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <p class="hero-meta" data-reveal style="--d:.28s">
+          <span data-i18n="hero-meta-focus">FOCUS / FRONTEND ENGINEERING</span>
+          <span data-i18n="hero-meta-ui">UI · INTERACTION · PERFORMANCE</span>
+        </p>
+
+        <div class="hero-links" data-reveal style="--d:.32s">
+          <a href="https://www.linkedin.com/in/ehab-mahmoud-web" target="_blank" rel="noopener">LINKEDIN ↗</a>
+          <a href="https://wa.me/20112845404" target="_blank" rel="noopener">WHATSAPP ↗</a>
+          <a href="mailto:ehabmahmoudramadan@gmail.com">EMAIL ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal style="--d:.12s">
+        <div class="orbit orbit-a" aria-hidden="true"></div>
+        <div class="orbit orbit-b" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <img class="portrait-img" src="ehab-photo.jpg" alt="Portrait of Ehab Mahmoud, frontend developer" width="760" height="950" onerror="this.classList.add('missing')">
+          <div class="portrait-fallback" aria-hidden="true"><span>EM</span></div>
+          <span class="portrait-chip">FRONTEND</span>
+        </div>
+        <span class="tag tag-1" data-magnetic>REACT</span>
+        <span class="tag tag-2" data-magnetic>TS</span>
+        <span class="tag tag-3" data-magnetic>NEXT.JS</span>
+        <span class="tag tag-4" data-magnetic>CSS</span>
+        <span class="coords">30.0444°N / 31.2357°E</span>
+        <span class="place">CAIRO · EGYPT</span>
+        <span class="avail"><span class="dot"></span> <span data-i18n="avail">AVAILABLE FOR OPPORTUNITIES</span></span>
+      </div>
+
+      <a class="scroll-sign" href="#about" aria-label="Scroll to about section">
+        <svg viewBox="0 0 200 220" class="scroll-path" aria-hidden="true">
+          <path id="wave" d="M100 0 C 40 26, 160 52, 100 78 C 40 104, 160 130, 100 156 C 40 182, 160 208, 100 220" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle r="3" fill="currentColor">
+            <animateMotion dur="4.6s" repeatCount="indefinite" rotate="auto"><mpath href="#wave"/></animateMotion>
+          </circle>
+        </svg>
+        <span class="scroll-text"><b data-i18n="scroll-up">SCROLL</b><i data-i18n="scroll-down">DOWN</i></span>
+        <span class="scroll-arrow" aria-hidden="true">↘</span>
+      </a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span data-i18n="tk-frontend">Frontend developer</span><span class="sep">✦</span>
+        <span>React</span><span class="sep">✦</span>
+        <span>TypeScript</span><span class="sep">✦</span>
+        <span>Next.js</span><span class="sep">✦</span>
+        <span data-i18n="tk-ui">UI engineering</span><span class="sep">✦</span>
+        <span data-i18n="tk-interaction">Interaction design</span><span class="sep">✦</span>
+        <span data-i18n="tk-perf">Performance</span><span class="sep">✦</span>
+        <span data-i18n="tk-clean">Clean code</span><span class="sep">✦</span>
+        <span data-i18n="tk-frontend">Frontend developer</span><span class="sep">✦</span>
+        <span>React</span><span class="sep">✦</span>
+        <span>TypeScript</span><span class="sep">✦</span>
+        <span>Next.js</span><span class="sep">✦</span>
+        <span data-i18n="tk-ui">UI engineering</span><span class="sep">✦</span>
+        <span data-i18n="tk-interaction">Interaction design</span><span class="sep">✦</span>
+        <span data-i18n="tk-perf">Performance</span><span class="sep">✦</span>
+        <span data-i18n="tk-clean">Clean code</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-about">01 / ABOUT</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="about-note">CAIRO, EGYPT</span>
+        </header>
+
+        <div class="about-grid">
+          <h2 class="about-title" data-reveal>
+            <span class="line"><span class="line-in" data-i18n="about-l1">Frontend is</span></span>
+            <span class="line"><span class="line-in" data-i18n="about-l2">my <em class="accent-ink">main</em> language.</span></span>
+          </h2>
+          <div class="about-body" data-reveal style="--d:.12s">
+            <p data-i18n="about-p1">I focus on frontend engineering and interactive web experiences — interfaces that are fast, responsive and built to be understood. My day-to-day lives in <strong>HTML, CSS, JavaScript, TypeScript, React, Next.js and Tailwind CSS</strong>.</p>
+            <p data-i18n="about-p2">But I don't work in isolation. I collaborate with a technical team that covers <strong>backend development, databases and data analysis</strong> — so the work doesn't stop at the interface. Together we build complete products.</p>
+            <a class="text-link" href="#projects" data-magnetic data-i18n="about-link">See what that produces <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="about-cols" data-reveal>
+          <div class="col">
+            <span class="col-label" data-i18n="about-col-work">I WORK WITH</span>
+            <ul class="chips">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>Git</li><li>APIs</li>
+            </ul>
+          </div>
+          <div class="col">
+            <span class="col-label" data-i18n="about-col-team">THE TEAM EXTENDS</span>
+            <ul class="chips chips-dim">
+              <li data-i18n="chip-backend">Backend</li><li data-i18n="chip-db">Databases</li><li data-i18n="chip-data">Data analysis</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="about-quote" data-reveal>
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <span data-i18n="about-quote">I engineer the interface. The team engineers the system. Together we ship the product.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="ecosystem" id="ecosystem">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-system">02 / THE SYSTEM</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="eco-note">ONE SPECIALTY · ONE TEAM</span>
+        </header>
+
+        <div class="eco-title-wrap" data-reveal>
+          <h2 class="eco-title" data-i18n="eco-title">The work doesn't stop at the interface.</h2>
+          <p class="eco-sub" data-i18n="eco-sub">Frontend is my specialty. The team expands the product's capability.</p>
+        </div>
+
+        <div class="eco-map" id="ecoMap" data-reveal>
+          <svg class="eco-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path class="eco-path" d="M50 50 C 40 34, 34 28, 27 22"></path>
+            <path class="eco-path" d="M50 50 C 38 60, 30 74, 24 82"></path>
+            <path class="eco-path" d="M50 50 C 62 50, 70 50, 78 50"></path>
+            <circle class="eco-pulse" r="1.6">
+              <animateMotion dur="3.2s" repeatCount="indefinite" path="M50 50 C 40 34, 34 28, 27 22"></animateMotion>
+            </circle>
+            <circle class="eco-pulse eco-pulse-2" r="1.6">
+              <animateMotion dur="3.2s" repeatCount="indefinite" begin=".4s" path="M50 50 C 38 60, 30 74, 24 82"></animateMotion>
+            </circle>
+            <circle class="eco-pulse eco-pulse-3" r="1.6">
+              <animateMotion dur="3.2s" repeatCount="indefinite" begin=".8s" path="M50 50 C 62 50, 70 50, 78 50"></animateMotion>
+            </circle>
+          </svg>
+
+          <div class="eco-node eco-core">
+            <span class="eco-node-tag" data-i18n="eco-core-tag">SPECIALTY</span>
+            <span class="eco-node-name">EHAB</span>
+            <span class="eco-node-role" data-i18n="eco-core-role">FRONTEND</span>
+          </div>
+
+          <div class="eco-node eco-n1">
+            <span class="eco-node-dot"></span>
+            <span class="eco-node-name" data-i18n="eco-n1-name">BACKEND</span>
+            <span class="eco-node-sub" data-i18n="eco-n1-sub">APIs · services · logic</span>
+          </div>
+          <div class="eco-node eco-n2">
+            <span class="eco-node-dot"></span>
+            <span class="eco-node-name" data-i18n="eco-n2-name">DATABASE</span>
+            <span class="eco-node-sub" data-i18n="eco-n2-sub">Storage · modeling · integrity</span>
+          </div>
+          <div class="eco-node eco-n3">
+            <span class="eco-node-dot"></span>
+            <span class="eco-node-name" data-i18n="eco-n3-name">DATA ANALYSIS</span>
+            <span class="eco-node-sub" data-i18n="eco-n3-sub">Turning data into decisions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-skills">03 / SKILLS</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="skills-note">TOOLS OF THE CRAFT</span>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skills-stage" data-reveal>
+            <h3 class="skills-word" id="skillWord" aria-hidden="true" data-i18n="skills-word">FRONTEND</h3>
+            <div class="skills-slot">
+              <span class="slot-name" id="slotName">HTML</span>
+              <span class="slot-desc" id="slotDesc">The structure of every interface.</span>
+            </div>
+            <span class="skills-index" id="skillsIndex">01 / 12</span>
+          </div>
+
+          <ul class="skill-list" id="skillList" data-reveal style="--d:.12s">
+            <li class="skill-row is-active" data-skill="0" tabindex="0" role="button" aria-pressed="true">
+              <span class="s-num">01</span><span class="s-name">HTML</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="1" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">02</span><span class="s-name">CSS</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="2" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">03</span><span class="s-name" data-i18n="skill-js">JavaScript</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="3" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">04</span><span class="s-name" data-i18n="skill-ts">TypeScript</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="4" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">05</span><span class="s-name">React</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="5" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">06</span><span class="s-name">Next.js</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="6" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">07</span><span class="s-name">Tailwind</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="7" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">08</span><span class="s-name">Git</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="8" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">09</span><span class="s-name">APIs</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="9" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">10</span><span class="s-name" data-i18n="skill-perf">Performance</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="10" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">11</span><span class="s-name" data-i18n="skill-resp">Responsive</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+            <li class="skill-row" data-skill="11" tabindex="0" role="button" aria-pressed="false">
+              <span class="s-num">12</span><span class="s-name" data-i18n="skill-ux">UX</span><span class="s-arr" aria-hidden="true">↗</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-projects">04 / PROJECTS</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="proj-note">SELECTED WORK · OPEN A CASE STUDY</span>
+        </header>
+
+        <div class="proj-hint" data-reveal data-i18n="proj-hint">Click a project to read the full case study</div>
+
+        <ul class="proj-list" id="projList">
+          <li class="proj-row" data-project="0" data-cursor="view" tabindex="0" role="button" aria-label="Open case study: Raqam">
+            <span class="p-num">01</span>
+            <span class="p-title">Raqam<span class="p-ghost" aria-hidden="true">RAQAM</span></span>
+            <span class="p-type" data-i18n="ptype-1">MARKETPLACE / WEB PLATFORM</span>
+            <span class="p-open" aria-hidden="true" data-i18n="p-open">OPEN ↗</span>
+          </li>
+          <li class="proj-row" data-project="1" data-cursor="view" tabindex="0" role="button" aria-label="Open case study: BeepMe">
+            <span class="p-num">02</span>
+            <span class="p-title">BeepMe<span class="p-ghost" aria-hidden="true">BEEPME</span></span>
+            <span class="p-type" data-i18n="ptype-2">FLUTTER / MVP</span>
+            <span class="p-open" aria-hidden="true" data-i18n="p-open">OPEN ↗</span>
+          </li>
+          <li class="proj-row" data-project="2" data-cursor="view" tabindex="0" role="button" aria-label="Open case study: Student Affairs Simulation">
+            <span class="p-num">03</span>
+            <span class="p-title" data-i18n-text="ptitle-3">Student Affairs<span class="p-ghost" aria-hidden="true" data-i18n="pghost-3">SIMULATION</span></span>
+            <span class="p-type" data-i18n="ptype-3">SIMULATION / WEB INTERFACE</span>
+            <span class="p-open" aria-hidden="true" data-i18n="p-open">OPEN ↗</span>
+          </li>
+          <li class="proj-row" data-project="3" data-cursor="view" tabindex="0" role="button" aria-label="Open case study: Laravel Platforms">
+            <span class="p-num">04</span>
+            <span class="p-title">Laravel Platforms<span class="p-ghost" aria-hidden="true">LARAVEL</span></span>
+            <span class="p-type" data-i18n="ptype-4">WEB DEVELOPMENT / PERFORMANCE</span>
+            <span class="p-open" aria-hidden="true" data-i18n="p-open">OPEN ↗</span>
+          </li>
+          <li class="proj-row" data-project="4" data-cursor="view" tabindex="0" role="button" aria-label="Open case study: More to come">
+            <span class="p-num">05</span>
+            <span class="p-title" data-i18n-text="ptitle-5">More to come<span class="p-ghost" aria-hidden="true" data-i18n="pghost-5">NEXT</span></span>
+            <span class="p-type" data-i18n="ptype-5">FUTURE PROJECTS</span>
+            <span class="p-open" aria-hidden="true" data-i18n="p-open">OPEN ↗</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="journey" id="journey">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-journey">05 / JOURNEY</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="journey-note">A CONTINUOUS BUILD</span>
+        </header>
+
+        <div class="journey-wrap" id="journeyWrap">
+          <svg class="journey-svg" aria-hidden="true">
+            <path class="journey-path"></path>
+            <path class="journey-fill"></path>
+          </svg>
+          <span class="journey-rail" aria-hidden="true"></span>
+          <ol class="journey-list">
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">01</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h1">START</h3>
+                <p data-i18n="mile-p1">The decision to build for the web. Curious, self-driven, committed.</p>
+              </div>
+            </li>
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">02</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h2">LEARNING</h3>
+                <p data-i18n="mile-p2">HTML, CSS and JavaScript taken seriously — the fundamentals before the frameworks.</p>
+              </div>
+            </li>
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">03</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h3">PROJECTS</h3>
+                <p data-i18n="mile-p3">First real builds and first real constraints — interfaces that had to work for people.</p>
+              </div>
+            </li>
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">04</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h4">TEAM</h3>
+                <p data-i18n="mile-p4">Working inside a full technical team — backend, databases, data — and owning the frontend.</p>
+              </div>
+            </li>
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">05</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h5">FRONTEND</h3>
+                <p data-i18n="mile-p5">Where the craft sharpens: React, TypeScript, Next.js, performance and interaction.</p>
+              </div>
+            </li>
+            <li class="mile" data-reveal>
+              <span class="mile-dot"></span>
+              <span class="mile-num">06</span>
+              <div class="mile-body">
+                <h3 data-i18n="mile-h6">BUILDING</h3>
+                <p data-i18n="mile-p6">Shipping products, not just pages — from first idea to working system.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="pipeline" id="pipeline">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-pipeline">06 / THE PIPELINE</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="pipe-note">IDEA TO PRODUCT</span>
+        </header>
+
+        <h2 class="pipeline-title" data-reveal>
+          <span class="line"><span class="line-in" data-i18n="pipe-title-1">A product is a</span></span>
+          <span class="line"><span class="line-in" data-i18n="pipe-title-2">chain of <em class="accent-ink">craft.</em></span></span>
+        </h2>
+
+        <ol class="pipe-flow" id="pipeFlow">
+          <li class="stage" data-reveal>
+            <span class="stage-num">S1</span>
+            <h3 data-i18n="stage-h1">IDEA</h3>
+            <p data-i18n="stage-p1">Where every product begins — a problem worth solving.</p>
+          </li>
+          <li class="stage" data-reveal style="--d:.08s">
+            <span class="stage-num">S2</span>
+            <h3 data-i18n="stage-h2">INTERFACE</h3>
+            <p data-i18n="stage-p2">The frontend — designed and engineered.</p>
+            <span class="stage-focus" data-i18n="stage-focus">EHAB'S FOCUS</span>
+          </li>
+          <li class="stage" data-reveal style="--d:.16s">
+            <span class="stage-num">S3</span>
+            <h3 data-i18n="stage-h3">LOGIC</h3>
+            <p data-i18n="stage-p3">Backend rules that make the product behave correctly.</p>
+          </li>
+          <li class="stage" data-reveal style="--d:.24s">
+            <span class="stage-num">S4</span>
+            <h3 data-i18n="stage-h4">DATA</h3>
+            <p data-i18n="stage-p4">Databases that store and shape what the product knows.</p>
+          </li>
+          <li class="stage" data-reveal style="--d:.32s">
+            <span class="stage-num">S5</span>
+            <h3 data-i18n="stage-h5">PRODUCT</h3>
+            <p data-i18n="stage-p5">A complete, working system — shipped as one.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="sec-label"><span class="dot"></span> <span data-i18n="sec-contact">07 / CONTACT</span></span>
+          <span class="sec-rule" aria-hidden="true"></span>
+          <span class="sec-note" data-i18n="contact-note">THE NEXT STEP</span>
+        </header>
+
+        <div class="contact-main">
+          <p class="contact-kicker" data-reveal data-i18n="contact-kicker">HAVE AN IDEA?</p>
+          <h2 class="contact-title" data-reveal>
+            <span class="line"><span class="line-in" data-i18n="contact-title-1">Let's build</span></span>
+            <span class="line"><span class="line-in ghost" data-i18n="contact-title-2">it.</span></span>
+          </h2>
+          <p class="contact-sub" data-reveal style="--d:.12s" data-i18n="contact-sub">Tell me what you're making. If it lives on the web, I can build the part people see — and bring a team that builds the rest.</p>
+
+          <div class="contact-cta" data-reveal style="--d:.18s">
+            <a class="btn btn-solid" href="https://wa.me/20112845404?text=Hi%20Ehab%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener" data-magnetic data-i18n="contact-cta-project" data-wa-en="Hi Ehab, I'd like to start a project." data-wa-ar="مرحباً إيهاب، أود بدء مشروع معك.">Start a project <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/ehab-mahmoud-web" target="_blank" rel="noopener" data-magnetic data-i18n="contact-cta-linkedin">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="contact-channels" data-reveal>
+          <a class="channel" href="mailto:ehabmahmoudramadan@gmail.com">
+            <span class="ch-label">EMAIL</span>
+            <span class="ch-value">ehabmahmoudramadan@gmail.com</span>
+            <span class="ch-arr" aria-hidden="true">↗</span>
+          </a>
+          <a class="channel" href="https://www.linkedin.com/in/ehab-mahmoud-web" target="_blank" rel="noopener">
+            <span class="ch-label">LINKEDIN</span>
+            <span class="ch-value">/in/ehab-mahmoud-web</span>
+            <span class="ch-arr" aria-hidden="true">↗</span>
+          </a>
+          <a class="channel" href="https://wa.me/20112845404" target="_blank" rel="noopener">
+            <span class="ch-label">WHATSAPP</span>
+            <span class="ch-value">+20 112 845 404</span>
+            <span class="ch-arr" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="contact-status" data-reveal>
+          <span class="status-line"><span class="dot"></span> <span data-i18n="contact-status-1">AVAILABLE FOR OPPORTUNITIES</span></span>
+          <span class="status-line" data-i18n="contact-status-2">RESPONSE — USUALLY WITHIN A DAY</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <span class="foot-name">EHAB MAHMOUD</span>
+          <span class="foot-role" data-i18n="foot-role">Frontend Developer</span>
+        </div>
+        <div class="foot-links">
+          <a href="https://www.linkedin.com/in/ehab-mahmoud-web" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://wa.me/20112845404" target="_blank" rel="noopener">WhatsApp ↗</a>
+          <a href="mailto:ehabmahmoudramadan@gmail.com">Email ↗</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 EHAB MAHMOUD</span>
+        <span data-i18n="foot-made">Designed &amp; engineered with intention.</span>
+        <span data-i18n="foot-city">CAIRO · EGYPT</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="case" id="caseStudy" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="caseTitle">
+    <div class="case-backdrop" data-close></div>
+    <div class="case-panel">
+      <header class="case-head">
+        <span class="case-meta" id="caseMeta">CASE STUDY / 01</span>
+        <button class="case-close" data-close aria-label="Close case study" data-i18n-aria="case-close-aria">✕</button>
+      </header>
+      <div class="case-body" id="caseBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
