@@ -21,98 +21,268 @@
     { name: "UX", desc: "Interfaces people understand.", nameAr: "تجربة المستخدم", descAr: "واجهات يفهمها الناس." }
   ];
 
+  const GH = "https://github.com/ehabmahmoudramadan-crypto";
+
   const PROJECTS = [
     {
       num: "01",
-      title: "Raqam",
-      type: "Marketplace / Web Platform",
+      title: "B2B Platform",
+      type: "Enterprise B2B / Full Stack",
+      source: GH + "/B2B-Platform",
       tagline:
-        "A digital marketplace where buying and selling feels fast, clear and trustworthy — not cluttered.",
+        "An enterprise-grade B2B procurement platform — ordering, e-wallet payments, e-invoicing and multi-role dashboards built to scale.",
       problem:
-        "Marketplaces collapse under clutter. The interface had to stay calm and legible while carrying a large catalogue of products, filters and actions.",
+        "Business buyers needed a complete procurement product — not just a storefront. Orders, quotes, wallets, invoicing and delivery all had to work as one system.",
       approach:
-        "A component-first architecture with a strict design system and performance budgets set from the first milestone.",
+        "A modular monorepo with clear domain boundaries: orders, wallet, invoicing, delivery, notifications and reporting as separate, testable modules.",
       challenge:
-        "Keeping the interface fast while rendering large product listings and frequent data updates across many screens.",
+        "Coordinating a full backend (NestJS, PostgreSQL, Redis, RabbitMQ), a web frontend and a Flutter mobile app without losing consistency.",
       solution:
-        "Code-splitting, virtualized lists, memoized components and carefully measured data fetching — so the UI stays responsive as the catalogue grows.",
+        "REST APIs with audit logging, an e-wallet engine, ZATCA-compliant e-invoicing, and push/SMS/email notifications wired across every role.",
       result:
-        "In production. Final performance figures will be published with the public case study.",
-      role: "Frontend development, UI engineering, design-system implementation.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "API Integration"]
+        "A complete multi-role B2B platform from API to mobile — a strong proof of full-stack ownership end to end.",
+      role: "Full-stack architecture, backend services, e-wallet & invoicing, integration.",
+      tech: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "RabbitMQ", "Flutter", "Docker"]
     },
     {
       num: "02",
-      title: "BeepMe",
-      type: "Flutter / MVP",
+      title: "Busly",
+      type: "Transport Platform / Full Stack",
+      source: GH + "/busly",
       tagline:
-        "A communication MVP with an interface engineered to feel native, fast and friendly from the first launch.",
+        "A smart transport booking platform for university students — ticket booking, live bus tracking and role-based dashboards.",
       problem:
-        "Shipping an MVP that still feels like a polished product, not a prototype.",
+        "University transport was fragmented and slow to manage. Students, owners and admins each needed a clear, role-specific workflow.",
       approach:
-        "A small surface area and a high level of polish — one strong core flow, executed well.",
+        "A full-stack product with an Express API and three tailored dashboards — student, owner and admin — on one shared data model.",
       challenge:
-        "Keeping the UI consistent and responsive across many device sizes with a limited team.",
+        "Live bus-station tracking with frequent data refresh, plus subscriptions, JWT auth and a full REST API held together cleanly.",
       solution:
-        "A compact design system in Flutter, reusable widgets, and performance-first rendering.",
-      result: "MVP shipped. Detailed case-study metrics coming soon.",
-      role: "UI / frontend development within a Flutter product.",
-      tech: ["Flutter", "Dart", "UI Systems"]
+        "JWT httpOnly auth, a ticket-booking engine, monthly subscriptions and 10-second live tracking auto-refresh across all dashboards.",
+      result:
+        "A working bilingual transport platform — backend, auth, database and interface shipped as one product.",
+      role: "Full-stack development, REST API, auth, dashboards and data model.",
+      tech: ["Node.js", "Express", "SQLite", "JWT", "JavaScript", "HTML/CSS"]
     },
     {
       num: "03",
-      title: "Student Affairs",
-      type: "Simulation / Web Interface",
+      title: "n8n B2B Platform",
+      type: "Multi-vendor B2B / Automation",
+      source: GH + "/n8n-b2b-platform",
       tagline:
-        "An interactive simulation of student-affairs workflows, built to make complex processes understandable.",
+        "A multi-vendor B2B platform with n8n workflow automation — vendor onboarding, tiered pricing and auto-invoicing.",
       problem:
-        "Explaining multi-step administrative processes is slow, dry and hard to follow.",
+        "Managing vendors, tiered product pricing and invoicing by hand is slow and error-prone — automation had to do the heavy lifting.",
       approach:
-        "Turn procedures into an interactive flow people can step through at their own pace.",
+        "A TypeScript backend on PostgreSQL/Prisma with tenant isolation, plus n8n automations driving onboarding, orders and low-stock alerts.",
       challenge:
-        "Complex, branching logic presented through a clear, calm interface.",
+        "Splitting logic between a robust API and an automation engine while keeping a single source of truth.",
       solution:
-        "A state-driven UI with guided steps, honest validation and readable data tables.",
+        "Role-based access (superadmin/vendor/staff), quantity-tiered pricing, auto-invoicing and reusable n8n workflow JSONs with a Docker setup.",
       result:
-        "Used as an internal training tool. A public write-up is in progress.",
-      role: "Frontend development and interface design.",
-      tech: ["JavaScript", "React", "CSS"]
+        "A complete multi-tenant vendor platform with real automation workflows — backend, frontend and data model in one repo.",
+      role: "Full-stack development, automation workflows, tenants & role-based access.",
+      tech: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Redis", "n8n", "Docker"]
     },
     {
       num: "04",
-      title: "Laravel Platforms",
-      type: "Web Development / Performance",
+      title: "WareSys",
+      type: "Inventory System / React",
+      source: GH + "/waresys",
       tagline:
-        "Server-driven platforms with interfaces optimized for speed, clarity and maintainability.",
+        "A warehouse and inventory management system — dashboards, stock alerts, invoices and profit reports in React.",
       problem:
-        "Existing platforms felt heavy — slow loads, tangled UI, hard to extend.",
+        "Warehouses juggle products, suppliers, customers and invoices. Without a clear dashboard, stock and profit get lost in spreadsheets.",
       approach:
-        "Treat the interface as a product, not a theme on top of a framework.",
+        "A client-side ERP built with React and Vite — dashboards, CRUD, invoicing and reporting as modular, reusable components.",
       challenge:
-        "Improving perceived performance and maintainability without rewriting the backend.",
+        "Rendering live sales/purchase charts and building interactive invoices with instant auto-calculation.",
       solution:
-        "Frontend performance work, cleaner component boundaries and hardened API integration.",
-      result: "Performance improvements shipped. Detailed numbers coming soon.",
-      role: "Frontend development and performance work.",
-      tech: ["Laravel / Blade", "JavaScript", "CSS", "MySQL"]
+        "Recharts dashboards, low-stock alerts, capacity tracking, invoice builders with auto-calculations and full supplier/customer management.",
+      result:
+        "A polished React SPA that turns inventory chaos into an organized, measurable system.",
+      role: "Frontend architecture, dashboards, data visualization and invoice logic.",
+      tech: ["React", "Vite", "React Router", "Recharts", "Context API", "JavaScript"]
     },
     {
       num: "05",
-      title: "More to come",
-      type: "Future Projects",
+      title: "LearnHub",
+      type: "Learning Platform / Web App",
+      source: GH + "/LearnHub",
       tagline:
-        "The next set of products is in progress — and this portfolio is built to grow with them.",
+        "A complete Arabic learning platform — course catalog, lesson viewer, student & instructor dashboards and a forum.",
       problem:
-        "Every product is a new set of constraints and decisions.",
+        "Online courses need more than a landing page — they need enrollment, lessons, dashboards and a community, all coherent.",
       approach:
-        "The same discipline — design, engineering, performance — applied to the next idea.",
+        "A multi-page app with separate flows for students and instructors, backed by a structured course-data layer.",
       challenge:
-        "Waiting is the hard part. The build itself is the enjoyable part.",
+        "Connecting courses, lessons, checkout, two dashboards and a forum into one clear experience.",
       solution:
-        "New projects slot into this same architecture and will appear here as they ship.",
-      result: "Shipping soon.",
-      role: "Frontend development.",
-      tech: ["TBD"]
+        "Course detail pages, a guided checkout, a lesson viewer, instructor dashboard and login/register — all RTL Arabic.",
+      result:
+        "A full learning product — from browsing courses to teaching them — delivered as a cohesive web app.",
+      role: "Frontend development, page architecture and course-data integration.",
+      tech: ["HTML", "CSS", "JavaScript", "Data layer"]
+    },
+    {
+      num: "06",
+      title: "AegisOps Sentinel",
+      type: "Security Dashboard / SIEM",
+      source: GH + "/AegisOps-Sentinel",
+      tagline:
+        "An interactive SIEM/SOC dashboard visualizing network baselines, live threat logs and attack maps.",
+      problem:
+        "Security telemetry is dense and hard to read. Analysts needed signals turned into something visual, live and explorable.",
+      approach:
+        "A Canvas-driven visualization layer simulating Wireshark PCAPs and Scapy telemetry — no server required.",
+      challenge:
+        "Rendering real-time-ish threat data and an interactive terminal with protocol LOCKDOWN mode smoothly in the browser.",
+      solution:
+        "Network-traffic baselines, live threat logs, a cyber attack map, an interactive terminal and protocol lockdown toggles.",
+      result:
+        "A recognizable SIEM/SOC console that makes cybersecurity monitoring tangible and interactive.",
+      role: "Frontend development, data visualization and interactive terminal UI.",
+      tech: ["HTML", "CSS", "JavaScript", "Canvas"]
+    },
+    {
+      num: "07",
+      title: "E-Commerce Store",
+      type: "E-commerce / Storefront",
+      source: GH + "/Professional-E-Commerce-Web-Application",
+      tagline:
+        "A modern Arabic e-commerce storefront engineered for speed, clean code and a smooth shopping experience.",
+      problem:
+        "Storefronts get slow and messy as they grow. This one had to be fast-loading and clean from the ground up.",
+      approach:
+        "Vanilla-first build with clean, error-free code prioritizing load speed and a fluid browsing flow.",
+      challenge:
+        "Delivering a rich storefront — products, browsing and layout — with zero bloat so it loads instantly.",
+      solution:
+        "A streamlined, well-structured storefront where fast rendering and clean markup are first-class citizens.",
+      result:
+        "A quick, tidy shopping experience that stays snappy across devices.",
+      role: "Frontend development, layout and performance.",
+      tech: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      num: "08",
+      title: "Mehrab",
+      type: "Muslim Dashboard / Web App",
+      source: GH + "/mehrab",
+      tagline:
+        "A smart Muslim dashboard — prayer times, a digital tasbih, verse of the day and an interactive Quran.",
+      problem:
+        "Daily spiritual tools were scattered across apps. One calm, focused interface could bring prayer times, dhikr and Quran together.",
+      approach:
+        "A single-page app with location-based prayer times, a goal-aware tasbih counter and an interactive Quran browser.",
+      challenge:
+        "Blending live time-based data with an offline-friendly, fully RTL Arabic interface.",
+      solution:
+        "Prayer-time countdowns, a custom-goal digital tasbih, daily verse with tafsir and a bookmarkable Quran — responsive and RTL.",
+      result:
+        "A serene, practical dashboard that consolidates day-to-day faith tools into one place.",
+      role: "Frontend development, UI and interactive features.",
+      tech: ["HTML", "CSS", "Tailwind", "JavaScript"]
+    },
+    {
+      num: "09",
+      title: "Coffee House",
+      type: "Brand Website / UI",
+      source: GH + "/coffee-house-website",
+      tagline:
+        "A responsive coffee-brand website — product collections, specialty stories and business services, all in clean CSS.",
+      problem:
+        "A coffee brand needed an identity online — not just products, but its story and business offerings presented with personality.",
+      approach:
+        "A pure HTML/CSS build with no heavy framework — fast, graceful and brand-led.",
+      challenge:
+        "Conveying warmth and craftsmanship while staying structured and responsive.",
+      solution:
+        "Product collections, specialty-coffee stories and services like office subscriptions, catering and wholesale in one cohesive site.",
+      result:
+        "A polished brand site that sells both the product and the experience.",
+      role: "Frontend development and responsive design.",
+      tech: ["HTML", "CSS"]
+    },
+    {
+      num: "10",
+      title: "Lamsat Aya",
+      type: "Brand Website / UI",
+      source: GH + "/lamsat-aya",
+      tagline:
+        "The official website for Lamsat Aya — a brand landing page with a custom SVG logo and photo gallery.",
+      problem:
+        "A new brand needed an online home that felt official, polished and representative.",
+      approach:
+        "A clean single-page site with a custom SVG logo and a focused visual gallery.",
+      challenge:
+        "Establishing brand presence with minimal content but maximum polish.",
+      solution:
+        "A refined landing page, company info and imagery — lightweight and easy to maintain.",
+      result:
+        "A credible official web presence that represents the brand well.",
+      role: "Frontend development, branding and layout.",
+      tech: ["HTML", "CSS", "JavaScript", "SVG"]
+    },
+    {
+      num: "11",
+      title: "Chirpy",
+      type: "Social UI / Bootstrap",
+      source: GH + "/chirpy-twitter-app",
+      tagline:
+        "A Twitter-style social app UI — feed, trends, profile, messages and auth screens built with Bootstrap.",
+      problem:
+        "Building social UI means many screens sharing one visual language and feel.",
+      approach:
+        "A component-consistent set of pages — feed, explore, profile, messages, login and register — on Bootstrap.",
+      challenge:
+        "Keeping every screen coherent and responsive as a single cohesive product.",
+      solution:
+        "A full set of social screens with consistent styling, iconography and dummy-data flows.",
+      result:
+        "A believable social-app interface covering the whole user journey.",
+      role: "Frontend development and UI screens.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
+    },
+    {
+      num: "12",
+      title: "AutoPlan",
+      type: "Calculator UI / Bootstrap",
+      source: GH + "/autoplan-car-calculator",
+      tagline:
+        "A car-installments calculator — vehicle inputs turned into an instant monthly-payment breakdown.",
+      problem:
+        "Car buyers need to see what a purchase actually costs per month before committing.",
+      approach:
+        "A focused calculator UI where car type, price, down payment and term shape the result at once.",
+      challenge:
+        "Making the numbers legible and the flow obvious in a compact interface.",
+      solution:
+        "An instant monthly-installment and interest view driven by the user's inputs, styled with Bootstrap.",
+      result:
+        "A simple, clear tool that translates pricing into an immediate monthly figure.",
+      role: "Frontend development and UI logic.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
+    },
+    {
+      num: "13",
+      title: "TaskFlow",
+      type: "Productivity UI / Bootstrap",
+      source: GH + "/taskflow-todo-app",
+      tagline:
+        "A to-do list web app — dashboards, today and overdue views, and a searchable task list with stats.",
+      problem:
+        "Task apps fail when they can't show you what matters — today, overdue and overall progress.",
+      approach:
+        "A dashboard-first to-do UI with stats and chart views plus a filterable full task list.",
+      challenge:
+        "Balancing overview dashboards with a practical, scannable task list.",
+      solution:
+        "Dashboard stats/charts, today and overdue views, and a sortable, filterable task list on Bootstrap.",
+      result:
+        "A clean productivity interface that surfaces priorities at a glance.",
+      role: "Frontend development and UI screens.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
     }
   ];
 
@@ -120,86 +290,251 @@
 
   const PROJECTS_AR = [
     {
-      title: "رقم",
-      type: "سوق إلكتروني / منصة ويب",
+      title: "منصة B2B",
+      type: "تعاملات تجارية / تطوير متكامل",
+      source: GH + "/B2B-Platform",
       tagline:
-        "سوق رقمي حيث يصبح البيع والشراء سريعًا وواضحًا وجديرًا بالثقة — لا فوضى.",
+        "منصة تعاملات تجارية من فئة المؤسسات — طلبات ومدفوعات محفظة إلكترونية وفواتير إلكترونية ولوحات تحكم متعددة الأدوار مبنية للتوسّع.",
       problem:
-        "الأسواق تنهار تحت الفوضى. كان على الواجهة أن تبقى هادئة وواضحة وهي تحمل كتالوجًا كبيرًا من المنتجات والفلاتر والإجراءات.",
+        "المشترون التجاريون احتاجوا منتج شراء متكامل — لا مجرد متجر. الطلبات وعروض الأسعار والمحافظ والفواتير والتوصيل كلها يجب أن تعمل كنظام واحد.",
       approach:
-        "بنية قائمة على المكوّنات مع نظام تصميم صارم وميزانيات أداء محددة من أول أسبوع عمل.",
+        "بنية وحدات بواجهات نطاقات واضحة: الطلبات والمحفظة والفواتير والتوصيل والإشعارات والتقارير كوحدات منفصلة وقابلة للاختبار.",
       challenge:
-        "إبقاء الواجهة سريعة أثناء عرض قوائم منتجات كبيرة وتحديثات بيانات متكررة عبر شاشات عديدة.",
+        "تنسيق خلفية كاملة (NestJS وPostgreSQL وRedis وRabbitMQ) مع واجهة ويب وتطبيق فلاتر للهاتف دون فقدان الاتساق.",
       solution:
-        "تقسيم الكود، وقوائم افتراضية، ومكوّنات محفوظة الذاكرة، وجلب بيانات محسوب بعناية — لتبقى الواجهة سريعة كلما كبر الكتالوج.",
+        "واجهات REST مع تدقيق، ومحرك محفظة إلكترونية، وفواتير متوافقة مع ZATCA، وإشعارات push وSMS وبريد لكل الأدوار.",
       result:
-        "قيد التشغيل. ستُنشر أرقام الأداء النهائية مع دراسة الحالة العامة.",
-      role: "تطوير الواجهة الأمامية، هندسة الواجهة، تنفيذ نظام التصميم.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "API Integration"]
+        "منصة B2B متكاملة متعددة الأدوار من API إلى الهاتف — إثبات قوي لتملك التطوير المتكامل من النهاية إلى النهاية.",
+      role: "هندسة متكاملة، خدمات خلفية، محفظة إلكترونية وفواتير، دمج.",
+      tech: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "RabbitMQ", "Flutter", "Docker"]
     },
     {
-      title: "بيب مي",
-      type: "فلاتر / منتج أولي (MVP)",
+      title: "بسلي",
+      type: "منصة نقل / تطوير متكامل",
+      source: GH + "/busly",
       tagline:
-        "منتج تواصل أولي بواجهة مهندَسة لتبدو أصلية وسريعة وودودة منذ أول إطلاق.",
+        "منصة حجز نقل ذكية لطلاب الجامعات — حجز تذاكر وتتبع حي للمحطات ولوحات تحكم متعددة الأدوار.",
       problem:
-        "إطلاق منتج أولي ما زال يبدو منتجًا مصقولًا لا نموذجًا تجريبيًا.",
+        "النقل الجامعي كان مجزأً وبطيئًا في الإدارة. الطلاب والمالكون والمشرفون كلٌّ يحتاج سير عمل واضحًا خاصًا بدوره.",
       approach:
-        "مساحة سطح صغيرة ومستوى عالٍ من الإتقان — تدفق أساسي قوي واحد، منفّذ بإتقان.",
+        "منتج متكامل بواجهة Express API وثلاث لوحات تحكم مخصصة — طالب ومالك ومشرف — على نموذج بيانات واحد مشترك.",
       challenge:
-        "إبقاء الواجهة متناسقة وسريعة عبر أحجام شاشات كثيرة بفريق محدود.",
+        "تتبع حي للمحطات مع تحديث متكرر، إضافة للاشتراكات ومصادقة JWT وواجهة REST كاملة تُحفظ بشكل نظيف.",
       solution:
-        "نظام تصميم مدمج في فلاتر، ومكوّنات قابلة لإعادة الاستخدام، وعرض يراعي الأداء أولًا.",
-      result: "أُطلق المنتج الأولي. مقاييس دراسة الحالة التفصيلية قريبًا.",
-      role: "تطوير واجهة المستخدم / الواجهة الأمامية داخل منتج فلاتر.",
-      tech: ["Flutter", "Dart", "UI Systems"]
+        "مصادقة JWT باستخدام httpOnly، ومحرك حجز تذاكر، واشتراكات شهرية، وتحديث تلقائي للتتبع الحي كل 10 ثوانٍ عبر كل اللوحات.",
+      result:
+        "منصة نقل متكاملة ثنائية اللغة — الخلفية والمصادقة وقاعدة البيانات والواجهة تُطلق كمنتج واحد.",
+      role: "تطوير متكامل، REST API، مصادقة، لوحات تحكم ونموذج بيانات.",
+      tech: ["Node.js", "Express", "SQLite", "JWT", "JavaScript", "HTML/CSS"]
     },
     {
-      title: "شؤون الطلاب",
-      type: "محاكاة / واجهة ويب",
+      title: "منصة n8n B2B",
+      type: "تعاملات متعددة البائعين / أتمتة",
+      source: GH + "/n8n-b2b-platform",
       tagline:
-        "محاكاة تفاعلية لسير عمل شؤون الطلاب، صُممت لتجعل العمليات المعقدة مفهومة.",
+        "منصة B2B متعددة البائعين مع أتمتة سير عمل عبر n8n — تأهيل البائعين وتسعير متدرج وفوترة تلقائية.",
       problem:
-        "شرح العمليات الإدارية متعددة الخطوات بطيء وجاف ويصعب متابعته.",
+        "إدارة البائعين والتسعير المتدرج والفواتير يدويًا بطيئة وعرضة للخطأ — كان على الأتمتة أن تحمل العبء الأكبر.",
       approach:
-        "تحويل الإجراءات إلى تدفق تفاعلي يمكن للناس تجربته خطوة بخطوة وبوتيرتهم الخاصة.",
+        "خلفية TypeScript على PostgreSQL/Prisma مع عزل مستأجرين، إضافة لأتمتات n8n تقود التأهيل والطلبات وتنبيهات انخفاض المخزون.",
       challenge:
-        "منطق متشعب ومعقد يُقدَّم عبر واجهة واضحة وهادئة.",
+        "تقسيم المنطق بين API قوي ومحرك أتمتة مع الحفاظ على مصدر حقيقة واحد.",
       solution:
-        "واجهة مدفوعة بالحالة مع خطوات موجّهة، وتحقق صادق، وجداول بيانات مقروءة.",
-      result: "تُستخدم كأداة تدريب داخلية. كتابة توثيق عام قيد الإعداد.",
-      role: "تطوير الواجهة الأمامية وتصميم الواجهة.",
-      tech: ["JavaScript", "React", "CSS"]
+        "وصول قائم على الأدوار (مشرف/بائع/موظف)، وتسعير متدرج حسب الكمية، وفوترة تلقائية، وسير عمل n8n قابلة للاستيراد مع إعداد Docker.",
+      result:
+        "منصة بائعين متعددة المستأجرين كاملة مع سير عمل أتمتة حقيقي — خلفية وواجهة ونموذج بيانات في مستودع واحد.",
+      role: "تطوير متكامل، سير عمل الأتمتة، المستأجرون والوصول القائم على الأدوار.",
+      tech: ["Node.js", "Express", "TypeScript", "Prisma", "PostgreSQL", "Redis", "n8n", "Docker"]
     },
     {
-      title: "منصات لارافل",
-      type: "تطوير ويب / أداء",
+      title: "ويرسي",
+      type: "نظام مخزون / React",
+      source: GH + "/waresys",
       tagline:
-        "منصات مدفوعة بالخادم بواجهات محسّنة للسرعة والوضوح وقابلية الصيانة.",
+        "نظام لإدارة المخازن والمخزون — لوحات تحكم وتنبيهات مخزون وفواتير وتقارير أرباح في React.",
       problem:
-        "المنصات الحالية بدت ثقيلة — تحميل بطيء، وواجهة متشابكة، وصعوبة في التوسيع.",
+        "المخازن تتولى المنتجات والموردين والعملاء والفواتير. دون لوحة تحكم واضحة، يضيع المخزون والأرباح في الجداول.",
       approach:
-        "التعامل مع الواجهة كمنتج، لا كقالب فوق إطار عمل.",
+        "نظام ERP من جهة العميل بُني بـ React وVite — لوحات وإضافة/تعديل/حذف وفوترة وتقارير كمكوّنات وحدات قابلة لإعادة الاستخدام.",
       challenge:
-        "تحسين الأداء المُدرك وقابلية الصيانة دون إعادة كتابة الواجهة الخلفية.",
+        "عرض رسوم بيانية حية للبيع/الشراء وبناء فواتير تفاعلية مع حساب تلقائي فوري.",
       solution:
-        "تحسين أداء الواجهة الأمامية، وحدود مكوّنات أنظف، وتكامل API محكم.",
-      result: "تحسينات الأداء أُطلقت. الأرقام التفصيلية قريبًا.",
-      role: "تطوير الواجهة الأمامية وأعمال الأداء.",
-      tech: ["Laravel / Blade", "JavaScript", "CSS", "MySQL"]
+        "لوحات Recharts، وتنبيهات انخفاض المخزون، وتتبع السعة، وبناة فواتير بحساب تلقائي وإدارة كاملة للموردين والعملاء.",
+      result:
+        "تطبيق React SPA أنيق يحوّل فوضى المخزون إلى نظام منظم وقابل للقياس.",
+      role: "هندسة الواجهة الأمامية، لوحات التحكم، تصوير البيانات ومنطق الفواتير.",
+      tech: ["React", "Vite", "React Router", "Recharts", "Context API", "JavaScript"]
     },
     {
-      title: "المزيد قادم",
-      type: "مشاريع قادمة",
+      title: "ليرن هب",
+      type: "منصة تعليمية / تطبيق ويب",
+      source: GH + "/LearnHub",
       tagline:
-        "المجموعة التالية من المنتجات قيد العمل — وهذه المحفظة بُنيت لتنمو معها.",
-      problem: "كل منتج هو مجموعة جديدة من القيود والقرارات.",
-      approach: "الانضباط نفسه — التصميم والهندسة والأداء — مطبَّق على الفكرة التالية.",
-      challenge: "الانتظار هو الجزء الصعب. أما البناء فهو الجزء الممتع.",
-      solution: "المشاريع الجديدة تتسق مع هذه البنية نفسها وستظهر هنا عند إطلاقها.",
-      result: "سيُطلق قريبًا.",
-      role: "تطوير الواجهة الأمامية.",
-      tech: ["قريبًا"]
+        "منصة تعليمية عربية متكاملة — كتالوج دورات وعارض دروس ولوحات تحكم للطالب والمدرّس ومنتدى.",
+      problem:
+        "الدورات عبر الإنترنت تحتاج أكثر من صفحة هبوط — تحتاج تسجيلًا ودروسًا ولوحات تحكم ومجتمعًا كلها متناسقة.",
+      approach:
+        "تطبيق متعدد الصفحات بتدفقات منفصلة للطلاب والمدرّسين، مدعوم بطبقة بيانات دورات منظمة.",
+      challenge:
+        "ربط الدورات والدروس والدفع ولوحتي تحكم ومنتدى في تجربة واحدة واضحة.",
+      solution:
+        "صفحات تفاصيل الدورات، ودفع موجّه، وعارض دروس، ولوحة تحكم مدرّس وتسجيل — كلها بواجهة عربية RTL.",
+      result:
+        "منتج تعليمي كامل — من تصفح الدورات إلى تدريسها — يُقدَّم كتطبيق ويب مترابط.",
+      role: "تطوير الواجهة الأمامية، هندسة الصفحات ودمج بيانات الدورات.",
+      tech: ["HTML", "CSS", "JavaScript", "طبقة بيانات"]
+    },
+    {
+      title: "إيجيس سنتينل",
+      type: "لوحة أمان / SIEM",
+      source: GH + "/AegisOps-Sentinel",
+      tagline:
+        "لوحة SIEM/SOC تفاعلية تصور خطوط الأساس للشبكة وسجلات التهديدات الحية وخرائط الهجمات.",
+      problem:
+        "بيانات الأمان كثيفة وصعبة القراءة. المحللون احتاجوا إشارات تُحوَّل إلى شيء بصري حي وقابل للاستكشاف.",
+      approach:
+        "طبقة تصور مبنية بـ Canvas تحاكي حزم Wireshark وبيانات Scapy — دون الحاجة لخادم.",
+      challenge:
+        "عرض بيانات تهديدات شبه حية وطرفية تفاعلية مع وضع قفل بروتوكول LOCKDOWN بسلاسة في المتصفح.",
+      solution:
+        "خطوط أساس لحركة الشبكة، وسجلات تهديدات حية، وخريطة هجمات سيبرانية، وطرفية تفاعلية ومفاتيح قفل البروتوكولات.",
+      result:
+        "كونسول SIEM/SOC معروف يجعل مراقبة الأمن السيبراني واقعية وتفاعلية.",
+      role: "تطوير الواجهة الأمامية، تصوير البيانات وواجهة طرفية تفاعلية.",
+      tech: ["HTML", "CSS", "JavaScript", "Canvas"]
+    },
+    {
+      title: "متجر إلكتروني",
+      type: "تجارة إلكترونية / واجهة متجر",
+      source: GH + "/Professional-E-Commerce-Web-Application",
+      tagline:
+        "متجر إلكتروني عربي عصري مهندَس للسرعة وكود نظيف وتجربة تسوق سلسة.",
+      problem:
+        "المتاجر تصبح بطيئة وفوضوية مع نموّها. هذا المتجر كان عليه أن يكون سريع التحميل ونظيفًا من الأساس.",
+      approach:
+        "بناء يعتمد الجافاسكريبت الأصلي بكود نظيف خالٍ من الأخطاء يعطي أولوية لسرعة التحميل وتدفق تصفح انسيابي.",
+      challenge:
+        "تقديم متجر غني — منتجات وتصفح وتخطيط — دون أي تضخم ليكون التحميل فوريًا.",
+      solution:
+        "متجر مبسّط ومنظم جيدًا ترتفع فيه سرعة العرض والكود النظيف إلى مرتبة الخيار الأول.",
+      result:
+        "تجربة تسوق سريعة ومرتبة تبقى مرنة عبر الأجهزة.",
+      role: "تطوير الواجهة الأمامية، التخطيط والأداء.",
+      tech: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      title: "محراب",
+      type: "لوحة مسلم / تطبيق ويب",
+      source: GH + "/mehrab",
+      tagline:
+        "لوحة المسلم الذكية — أوقات الصلاة ومسبحة رقمية وآية اليوم ومصحف تفاعلي.",
+      problem:
+        "أدوات العبادة اليومية كانت موزعة عبر تطبيقات متعددة. واجهة واحدة هادئة ومركّزة يمكن أن تجمع أوقات الصلاة والذكر والقرآن معًا.",
+      approach:
+        "تطبيق صفحة واحدة بأوقات صلاة مبنية على الموقع، ومسبحة مدركة للأهداف، ومتصفح قرآن تفاعلي.",
+      challenge:
+        "مزج بيانات حية معتمدة على الوقت مع واجهة عربية RTL كاملة تعمل دون اتصال.",
+      solution:
+        "عدّادات تنازلية لأوقات الصلاة، ومسبحة رقمية بهدف مخصص، وآية يوم مع تفسير وترجمة، ومتصفح قرآن قابل للحفظ — متجاوب وRTL.",
+      result:
+        "لوحة هادئة وعملية تجمع أدوات الإيمان اليومية في مكان واحد.",
+      role: "تطوير الواجهة الأمامية، الواجهة والميزات التفاعلية.",
+      tech: ["HTML", "CSS", "Tailwind", "JavaScript"]
+    },
+    {
+      title: "كوفر هاوس",
+      type: "موقع علامة تجارية / واجهة",
+      source: GH + "/coffee-house-website",
+      tagline:
+        "موقع قهوة متجاوب — مجموعات منتجات وقصص متخصصة وخدمات أعمال بصيغة CSS نظيفة.",
+      problem:
+        "علامة قهوة تحتاج هوية عبر الإنترنت — لا مجرد منتجات، بل قصتها وعروض أعمالها مقدّمة بشخصية.",
+      approach:
+        "بناء HTML/CSS خالص دون إطار ثقيل — سريع وأنيق وموجّه بالعلامة.",
+      challenge:
+        "إيصال الدفء والحرفية مع البقاء منظمًا ومتجاوبًا.",
+      solution:
+        "مجموعات منتجات، وقصص قهوة متخصصة، وخدمات مثل اشتراكات المكاتب والتجهيزات والبيع بالجملة في موقع واحد مترابط.",
+      result:
+        "موقع علامة أنيق يبيع المنتج والتجربة معًا.",
+      role: "تطوير الواجهة الأمامية والتجاوب.",
+      tech: ["HTML", "CSS"]
+    },
+    {
+      title: "لمسة آية",
+      type: "موقع علامة تجارية / واجهة",
+      source: GH + "/lamsat-aya",
+      tagline:
+        "الموقع الرسمي لماركة لمسة آية — صفحة هبوط بشعار SVG مخصص ومعرض صور.",
+      problem:
+        "ماركة جديدة احتاجت موطنًا إلكترونيًا يبدو رسميًا ومصقولًا وموثوقًا.",
+      approach:
+        "موقع صفحة واحدة نظيف بشعار SVG مخصص ومعرض بصري مركّز.",
+      challenge:
+        "تأسيس حضور للماركة بمحتوى بسيط لكن بأقصى إتقان.",
+      solution:
+        "صفحة هبوط راقية ومعلومات عن الماركة وصور — خفيفة وسهلة الصيانة.",
+      result:
+        "حضور ويب رسمي موثوق يمثّل الماركة جيدًا.",
+      role: "تطوير الواجهة الأمامية، العلامة والتخطيط.",
+      tech: ["HTML", "CSS", "JavaScript", "SVG"]
+    },
+    {
+      title: "تشيربي",
+      type: "واجهة اجتماعية / Bootstrap",
+      source: GH + "/chirpy-twitter-app",
+      tagline:
+        "واجهة تطبيق اجتماعي بأسلوب تويتر — موجز واتجاهات وملف ورسائل وشاشات تسجيل مبنية بـ Bootstrap.",
+      problem:
+        "بناء واجهة اجتماعية يعني شاشات كثيرة تتشارك لغة بصرية وإحساسًا واحدًا.",
+      approach:
+        "مجموعة صفحات متسقة المكوّنات — موجز واستكشاف وملف ورسائل وتسجيل — على Bootstrap.",
+      challenge:
+        "إبقاء كل شاشة متماسكة ومتجاوبة كمنتج واحد مترابط.",
+      solution:
+        "مجموعة كاملة من شاشات التواصل مع تنسيق وأيقونات وتدفقات بيانات تجريبية متسقة.",
+      result:
+        "واجهة اجتماعية قابلة للتصديق تغطي رحلة المستخدم كلها.",
+      role: "تطوير الواجهة الأمامية وشاشات الواجهة.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
+    },
+    {
+      title: "أوتو بلان",
+      type: "واجهة حاسبة / Bootstrap",
+      source: GH + "/autoplan-car-calculator",
+      tagline:
+        "حاسبة أقساط السيارات — مدخلات المركبة تتحول إلى تفصيل فوري للأقساط الشهرية.",
+      problem:
+        "مشترو السيارات يحتاجون رؤية تكلفة الشراء الفعلية شهريًا قبل الالتزام.",
+      approach:
+        "واجهة حاسبة مركّزة حيث يحدد نوع السيارة والسعر والدفعة المقدمة والمدة النتيجة مباشرة.",
+      challenge:
+        "جعل الأرقام مقروءة والتدفق واضحًا في واجهة مدمجة.",
+      solution:
+        "عرض فوري للقسط الشهري والفائدة مدفوع بمدخلات المستخدم، منسق بـ Bootstrap.",
+      result:
+        "أداة بسيطة وواضحة تترجم التسعير إلى رقم شهري مباشر.",
+      role: "تطوير الواجهة الأمامية ومنطق الواجهة.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
+    },
+    {
+      title: "تاسك فلو",
+      type: "واجهة إنتاجية / Bootstrap",
+      source: GH + "/taskflow-todo-app",
+      tagline:
+        "تطبيق مهام على الويب — لوحات تحكم وعرض اليوم والمتأخر وقائمة مهام قابلة للبحث مع إحصائيات.",
+      problem:
+        "تطبيقات المهام تفشل عندما لا تعرض ما يهم — اليوم والمتأخر والتقدم الكلي.",
+      approach:
+        "واجهة مهام تعطي الأولوية للوحة التحكم مع إحصائيات ورسوم إضافة لقائمة مهام كاملة قابلة للتصفية.",
+      challenge:
+        "الموازنة بين لوحات النظرة العامة وقائمة مهام عملية قابلة للمسح السريع.",
+      solution:
+        "إحصائيات ورسوم لوحة التحكم، وعرض اليوم والمتأخر، وقائمة مهام قابلة للفرز والتصفية على Bootstrap.",
+      result:
+        "واجهة إنتاجية نظيفة تُبرز الأولويات بنظرة واحدة.",
+      role: "تطوير الواجهة الأمامية وشاشات الواجهة.",
+      tech: ["HTML", "CSS", "Bootstrap", "Bootstrap Icons"]
     }
   ];
 
@@ -269,15 +604,19 @@
       "sec-projects": "04 / PROJECTS",
       "proj-note": "SELECTED WORK · OPEN A CASE STUDY",
       "proj-hint": "Click a project to read the full case study",
-      "ptype-1": "MARKETPLACE / WEB PLATFORM",
-      "ptype-2": "FLUTTER / MVP",
-      "ptype-3": "SIMULATION / WEB INTERFACE",
-      "ptype-4": "WEB DEVELOPMENT / PERFORMANCE",
-      "ptype-5": "FUTURE PROJECTS",
-      "ptitle-3": "Student Affairs",
-      "pghost-3": "SIMULATION",
-      "ptitle-5": "More to come",
-      "pghost-5": "NEXT",
+      "ptype-1": "ENTERPRISE B2B / FULL STACK",
+      "ptype-2": "TRANSPORT PLATFORM / FULL STACK",
+      "ptype-3": "MULTI-VENDOR B2B / AUTOMATION",
+      "ptype-4": "INVENTORY SYSTEM / REACT",
+      "ptype-5": "LEARNING PLATFORM / WEB APP",
+      "ptype-6": "SECURITY DASHBOARD / SIEM",
+      "ptype-7": "E-COMMERCE / STOREFRONT",
+      "ptype-8": "MUSLIM DASHBOARD / WEB APP",
+      "ptype-9": "BRAND WEBSITE / UI",
+      "ptype-10": "BRAND WEBSITE / UI",
+      "ptype-11": "SOCIAL UI / BOOTSTRAP",
+      "ptype-12": "CALCULATOR UI / BOOTSTRAP",
+      "ptype-13": "PRODUCTIVITY UI / BOOTSTRAP",
       "p-open": "OPEN ↗",
       "sec-journey": "05 / JOURNEY",
       "journey-note": "A CONTINUOUS BUILD",
@@ -404,15 +743,19 @@
       "sec-projects": "04 / المشاريع",
       "proj-note": "أعمال مختارة · افتح دراسة حالة",
       "proj-hint": "اضغط على مشروع لقراءة دراسة الحالة كاملة",
-      "ptype-1": "سوق إلكتروني / منصة ويب",
-      "ptype-2": "فلاتر / منتج أولي",
-      "ptype-3": "محاكاة / واجهة ويب",
-      "ptype-4": "تطوير ويب / أداء",
-      "ptype-5": "مشاريع قادمة",
-      "ptitle-3": "شؤون الطلاب",
-      "pghost-3": "محاكاة",
-      "ptitle-5": "المزيد قادم",
-      "pghost-5": "التالي",
+      "ptype-1": "تعاملات مؤسسية / تطوير متكامل",
+      "ptype-2": "منصة نقل / تطوير متكامل",
+      "ptype-3": "متعدد البائعين / أتمتة",
+      "ptype-4": "نظام مخزون / React",
+      "ptype-5": "منصة تعليمية / تطبيق ويب",
+      "ptype-6": "لوحة أمان / SIEM",
+      "ptype-7": "تجارة إلكترونية / واجهة",
+      "ptype-8": "لوحة مسلم / تطبيق ويب",
+      "ptype-9": "موقع علامة / واجهة",
+      "ptype-10": "موقع علامة / واجهة",
+      "ptype-11": "واجهة اجتماعية / Bootstrap",
+      "ptype-12": "واجهة حاسبة / Bootstrap",
+      "ptype-13": "واجهة إنتاجية / Bootstrap",
       "p-open": "افتح ↗",
       "sec-journey": "05 / الرحلة",
       "journey-note": "بناء متواصل",
@@ -827,16 +1170,24 @@
       d.tech.map((t) => "<li>" + t + "</li>").join("") +
       "</ul></div>" +
       '<div class="cs-links">' +
-      '<button class="cs-link soon" type="button"><span aria-hidden="true">↗</span> ' +
-      dict.csLive +
-      "</button>" +
-      '<button class="cs-link soon" type="button"><span aria-hidden="true">↗</span> ' +
-      dict.csSource +
-      "</button>" +
+      (p.live
+        ? '<a class="cs-link" href="' + p.live + '" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> ' +
+          dict.csLive +
+          "</a>"
+        : '<button class="cs-link soon" type="button"><span aria-hidden="true">↗</span> ' +
+          dict.csLive +
+          "</button>") +
+      (p.source
+        ? '<a class="cs-link" href="' + p.source + '" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> ' +
+          dict.csSource +
+          "</a>"
+        : '<button class="cs-link soon" type="button"><span aria-hidden="true">↗</span> ' +
+          dict.csSource +
+          "</button>") +
       "</div>" +
-      '<span class="cs-soon">' +
-      dict.csSoon +
-      "</span>";
+      (p.live || p.source
+        ? ""
+        : '<span class="cs-soon">' + dict.csSoon + "</span>");
 
     $("#caseMeta").textContent = dict.csKicker + p.num;
     caseEl.classList.add("is-open");
