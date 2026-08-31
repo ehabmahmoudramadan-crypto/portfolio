@@ -29,6 +29,7 @@
       title: "B2B Platform",
       type: "Enterprise B2B / Full Stack",
       source: GH + "/B2B-Platform",
+      live: "https://ehabmahmoudramadan-crypto.github.io/B2B-Platform/",
       tagline:
         "An enterprise-grade B2B procurement platform — ordering, e-wallet payments, e-invoicing and multi-role dashboards built to scale.",
       problem:
@@ -69,6 +70,7 @@
       title: "n8n B2B Platform",
       type: "Multi-vendor B2B / Automation",
       source: GH + "/n8n-b2b-platform",
+      live: "https://ehabmahmoudramadan-crypto.github.io/n8n-b2b-platform/",
       tagline:
         "A multi-vendor B2B platform with n8n workflow automation — vendor onboarding, tiered pricing and auto-invoicing.",
       problem:
@@ -89,6 +91,7 @@
       title: "WareSys",
       type: "Inventory System / React",
       source: GH + "/waresys",
+      live: "https://ehabmahmoudramadan-crypto.github.io/waresys/",
       tagline:
         "A warehouse and inventory management system — dashboards, stock alerts, invoices and profit reports in React.",
       problem:
@@ -109,6 +112,7 @@
       title: "LearnHub",
       type: "Learning Platform / Web App",
       source: GH + "/LearnHub",
+      live: "https://ehabmahmoudramadan-crypto.github.io/LearnHub/",
       tagline:
         "A complete Arabic learning platform — course catalog, lesson viewer, student & instructor dashboards and a forum.",
       problem:
@@ -129,6 +133,7 @@
       title: "AegisOps Sentinel",
       type: "Security Dashboard / SIEM",
       source: GH + "/AegisOps-Sentinel",
+      live: "https://ehabmahmoudramadan-crypto.github.io/AegisOps-Sentinel/",
       tagline:
         "An interactive SIEM/SOC dashboard visualizing network baselines, live threat logs and attack maps.",
       problem:
@@ -149,6 +154,7 @@
       title: "E-Commerce Store",
       type: "E-commerce / Storefront",
       source: GH + "/Professional-E-Commerce-Web-Application",
+      live: "https://ehabmahmoudramadan-crypto.github.io/Professional-E-Commerce-Web-Application/",
       tagline:
         "A modern Arabic e-commerce storefront engineered for speed, clean code and a smooth shopping experience.",
       problem:
@@ -169,6 +175,7 @@
       title: "Mehrab",
       type: "Muslim Dashboard / Web App",
       source: GH + "/mehrab",
+      live: "https://ehabmahmoudramadan-crypto.github.io/mehrab/",
       tagline:
         "A smart Muslim dashboard — prayer times, a digital tasbih, verse of the day and an interactive Quran.",
       problem:
@@ -189,6 +196,7 @@
       title: "Coffee House",
       type: "Brand Website / UI",
       source: GH + "/coffee-house-website",
+      live: "https://ehabmahmoudramadan-crypto.github.io/coffee-house-website/",
       tagline:
         "A responsive coffee-brand website — product collections, specialty stories and business services, all in clean CSS.",
       problem:
@@ -229,6 +237,7 @@
       title: "Chirpy",
       type: "Social UI / Bootstrap",
       source: GH + "/chirpy-twitter-app",
+      live: "https://ehabmahmoudramadan-crypto.github.io/chirpy-twitter-app/",
       tagline:
         "A Twitter-style social app UI — feed, trends, profile, messages and auth screens built with Bootstrap.",
       problem:
@@ -249,6 +258,7 @@
       title: "AutoPlan",
       type: "Calculator UI / Bootstrap",
       source: GH + "/autoplan-car-calculator",
+      live: "https://ehabmahmoudramadan-crypto.github.io/autoplan-car-calculator/",
       tagline:
         "A car-installments calculator — vehicle inputs turned into an instant monthly-payment breakdown.",
       problem:
@@ -269,6 +279,7 @@
       title: "TaskFlow",
       type: "Productivity UI / Bootstrap",
       source: GH + "/taskflow-todo-app",
+      live: "https://ehabmahmoudramadan-crypto.github.io/taskflow-todo-app/",
       tagline:
         "A to-do list web app — dashboards, today and overdue views, and a searchable task list with stats.",
       problem:
@@ -676,7 +687,7 @@
       csTech: "TECH STACK",
       csLive: "Live preview",
       csSource: "Source code",
-      csSoon: "Live link coming soon — this project is a placeholder entry."
+      csSoon: "Live preview not published for this project yet — you can view the source code above."
     },
     ar: {
       skip: "تخطَّ إلى المحتوى",
@@ -815,7 +826,7 @@
       csTech: "التقنيات",
       csLive: "معاينة حيّة",
       csSource: "الكود المصدري",
-      csSoon: "الرابط المباشر قادم — هذا المشروع إدخال مؤقت."
+      csSoon: "لم يُنشر عرض حي لهذا المشروع بعد — يمكنك الاطلاع على الكود المصدري أعلاه."
     }
   };
 
@@ -1185,9 +1196,9 @@
           dict.csSource +
           "</button>") +
       "</div>" +
-      (p.live || p.source
-        ? ""
-        : '<span class="cs-soon">' + dict.csSoon + "</span>");
+      (!p.live
+        ? '<span class="cs-soon">' + dict.csSoon + "</span>"
+        : "");
 
     $("#caseMeta").textContent = dict.csKicker + p.num;
     caseEl.classList.add("is-open");
