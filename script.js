@@ -29,7 +29,6 @@
       title: "B2B Platform",
       type: "Enterprise B2B / Full Stack",
       source: GH + "/B2B-Platform",
-      live: "https://ehabmahmoudramadan-crypto.github.io/B2B-Platform/",
       tagline:
         "An enterprise-grade B2B procurement platform — ordering, e-wallet payments, e-invoicing and multi-role dashboards built to scale.",
       problem:
@@ -50,6 +49,7 @@
       title: "Busly",
       type: "Transport Platform / Full Stack",
       source: GH + "/busly",
+      live: "https://ehabmahmoudramadan-crypto.github.io/busly/",
       tagline:
         "A smart transport booking platform for university students — ticket booking, live bus tracking and role-based dashboards.",
       problem:
@@ -217,6 +217,7 @@
       title: "Lamsat Aya",
       type: "Brand Website / UI",
       source: GH + "/lamsat-aya",
+      live: "https://ehabmahmoudramadan-crypto.github.io/lamsat-aya/",
       tagline:
         "The official website for Lamsat Aya — a brand landing page with a custom SVG logo and photo gallery.",
       problem:
