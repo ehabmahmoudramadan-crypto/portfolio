@@ -22,7 +22,7 @@ Modern, fast and interactive web experiences — interfaces that are responsive,
 
 ### Beyond the Interface
 
-The work doesn't stop at the frontend. I collaborate with a technical team covering **backend development, databases and data analysis** — so together we build complete products, not just pages.
+The work doesn't stop at the frontend. I collaborate with a technical team covering **backend development and databases** — so together we build complete products, not just pages.
 
 ---
 

@@ -584,13 +584,12 @@
       "about-p1":
         "I focus on frontend engineering and interactive web experiences — interfaces that are fast, responsive and built to be understood. My day-to-day lives in <strong>HTML, CSS, JavaScript, TypeScript, React, Next.js and Tailwind CSS</strong>.",
       "about-p2":
-        "But I don't work in isolation. I collaborate with a technical team that covers <strong>backend development, databases and data analysis</strong> — so the work doesn't stop at the interface. Together we build complete products.",
+        "But I don't work in isolation. I collaborate with a technical team that covers <strong>backend development and databases</strong> — so the work doesn't stop at the interface. Together we build complete products.",
       "about-link": "See what that produces →",
       "about-col-work": "I WORK WITH",
       "about-col-team": "THE TEAM EXTENDS",
       "chip-backend": "Backend",
       "chip-db": "Databases",
-      "chip-data": "Data analysis",
       "about-quote":
         "I engineer the interface. The team engineers the system. Together we ship the product.",
       "sec-system": "02 / THE SYSTEM",
@@ -603,8 +602,6 @@
       "eco-n1-sub": "APIs · services · logic",
       "eco-n2-name": "DATABASE",
       "eco-n2-sub": "Storage · modeling · integrity",
-      "eco-n3-name": "DATA ANALYSIS",
-      "eco-n3-sub": "Turning data into decisions",
       "sec-skills": "03 / SKILLS",
       "skills-note": "TOOLS OF THE CRAFT",
       "skills-word": "FRONTEND",
@@ -723,13 +720,12 @@
       "about-p1":
         "أركّز على هندسة الواجهات الأمامية وتجارب الويب التفاعلية — واجهات سريعة ومتجاوبة ومصممة لتُفهم بسهولة. يوميًا أعمل مع <strong>HTML وCSS وJavaScript وTypeScript وReact وNext.js وTailwind CSS</strong>.",
       "about-p2":
-        "لكني لا أعمل بمعزل عن الفريق. أتعاون مع فريق تقني يغطي <strong>تطوير الواجهات الخلفية وقواعد البيانات وتحليل البيانات</strong> — فلا يتوقف العمل عند الواجهة. معًا نبني منتجات متكاملة.",
+        "لكني لا أعمل بمعزل عن الفريق. أتعاون مع فريق تقني يغطي <strong>تطوير الواجهات الخلفية وقواعد البيانات</strong> — فلا يتوقف العمل عند الواجهة. معًا نبني منتجات متكاملة.",
       "about-link": "شاهد ما ينتج عن ذلك ←",
       "about-col-work": "أعمل مع",
       "about-col-team": "الفريق يغطي أيضًا",
       "chip-backend": "الواجهة الخلفية",
       "chip-db": "قواعد البيانات",
-      "chip-data": "تحليل البيانات",
       "about-quote":
         "أنا أهندس الواجهة. الفريق يهندس النظام. ومعًا نطلق المنتج.",
       "sec-system": "02 / المنظومة",
@@ -742,8 +738,6 @@
       "eco-n1-sub": "واجهات API · خدمات · منطق",
       "eco-n2-name": "قاعدة البيانات",
       "eco-n2-sub": "تخزين · نمذجة · سلامة البيانات",
-      "eco-n3-name": "تحليل البيانات",
-      "eco-n3-sub": "تحويل البيانات إلى قرارات",
       "sec-skills": "03 / المهارات",
       "skills-note": "أدوات الحرفة",
       "skills-word": "واجهات أمامية",

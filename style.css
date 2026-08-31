@@ -1451,11 +1451,6 @@ section {
 }
 
 .eco-n2 {
-  left: 16%;
-  bottom: 5%;
-}
-
-.eco-n3 {
   right: 14%;
   top: 50%;
   align-items: flex-end;
@@ -2563,8 +2558,7 @@ html.js .mile.is-in {
   }
 
   .eco-n1,
-  .eco-n2,
-  .eco-n3 {
+  .eco-n2 {
     position: relative;
     transform: none;
     align-items: flex-start;
@@ -2578,8 +2572,7 @@ html.js .mile.is-in {
   }
 
   .eco-n1 .eco-node-dot,
-  .eco-n2 .eco-node-dot,
-  .eco-n3 .eco-node-dot {
+  .eco-n2 .eco-node-dot {
     position: absolute;
     left: -5px;
     top: 38px;
