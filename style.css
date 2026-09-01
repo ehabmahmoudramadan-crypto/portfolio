@@ -47,7 +47,7 @@ html[lang="ar"] {
   --font-m: "Cairo", "DM Mono", ui-monospace, monospace;
 }
 
-html[lang="ar"] :is(.sec-label, .sec-note, .mile-num, .p-type, .stage-num, .stage-focus, .col-label, .ch-label, .eyebrow, .hero-meta, .skills-index, .eco-node-tag, .eco-node-sub, .case-meta, .cs-label, .contact-kicker, .status-line, .proj-hint, .scroll-text, .s-num, .cs-kicker, .exp-year-num, .exp-year-tag) {
+html[lang="ar"] :is(.sec-label, .sec-note, .mile-num, .p-type, .stage-num, .stage-focus, .col-label, .ch-label, .eyebrow, .hero-meta, .skills-index, .eco-node-tag, .eco-node-sub, .case-meta, .cs-label, .contact-kicker, .status-line, .proj-hint, .scroll-text, .s-num, .cs-kicker, .exp-track-year, .exp-track-range, .exp-track-tag, .exp-cert-name, .exp-cert-date, .exp-certs-title) {
   letter-spacing: 0;
 }
 
@@ -1988,54 +1988,55 @@ html.js .mile.is-in {
   margin-bottom: clamp(48px, 7vh, 80px);
 }
 
-.exp-list {
-  display: flex;
-  flex-direction: column;
+.exp-timeline {
+  position: relative;
 }
 
-.exp-item {
+.exp-timeline::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -26px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+
+.exp-track {
   display: grid;
-  grid-template-columns: clamp(160px, 22vw, 240px) minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 64px);
-  padding: clamp(28px, 4vw, 46px) 0;
+  grid-template-columns: clamp(150px, 20vw, 230px) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 60px);
+  padding: clamp(30px, 4vw, 46px) 0;
   border-top: 1px solid var(--line);
   position: relative;
 }
 
-.exp-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  width: 0;
-  background: var(--accent);
-  transition: width 0.6s var(--ease);
+.exp-track:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 
-.exp-item:hover::after {
-  width: 100%;
-}
-
-.exp-year {
+.exp-track-head {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.exp-year-num {
-  font: 700 clamp(2.2rem, 4vw, 3.4rem) var(--font-d);
+.exp-track-year {
+  font: 700 clamp(2.4rem, 4.6vw, 4.2rem) var(--font-d);
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--ink);
 }
 
-.exp-year-num-wide {
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
-  letter-spacing: 0.06em;
+.exp-track-range {
+  font: 500 10px var(--font-m);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-.exp-year-tag {
+.exp-track-tag {
   align-self: flex-start;
   font: 500 8px var(--font-m);
   letter-spacing: 0.24em;
@@ -2047,67 +2048,94 @@ html.js .mile.is-in {
   transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
-.exp-item:hover .exp-year-tag {
+.exp-track:hover .exp-track-tag {
   color: var(--accent);
   border-color: var(--accent);
 }
 
-.exp-body h3 {
+.exp-track::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -31px;
+  top: 42px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.exp-track-body h3 {
   margin: 0 0 10px;
-  font: 700 clamp(1.4rem, 2.6vw, 2rem) var(--font-d);
+  font: 700 clamp(1.5rem, 2.8vw, 2.2rem) var(--font-d);
   letter-spacing: -0.02em;
   color: var(--ink);
 }
 
-.exp-body p {
+.exp-track-body p {
   margin: 0;
   font-size: 15px;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 62ch;
+  max-width: 58ch;
 }
 
 .exp-certs {
+  margin-top: clamp(48px, 6vh, 72px);
+  padding-top: clamp(30px, 4vw, 44px);
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.exp-certs-title {
+  margin: 0 0 22px;
+  font: 700 1rem var(--font-d);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.exp-certs-list {
   list-style: none;
-  margin: 14px 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 24px;
-  max-width: 620px;
+  gap: 12px 32px;
+  max-width: 760px;
 }
 
-.exp-certs li {
-  position: relative;
-  padding-left: 18px;
-  font-size: 13.5px;
-  line-height: 1.55;
+.exp-certs-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.3s var(--ease);
+}
+
+.exp-certs-list li:hover {
+  border-bottom-color: var(--accent);
+}
+
+.exp-cert-name {
+  font-size: 14.5px;
+  line-height: 1.5;
   color: var(--muted);
+  flex: 1;
+  transition: color 0.3s var(--ease);
 }
 
-.exp-certs li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.62em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-html[dir="rtl"] .exp-certs li {
-  padding-left: 0;
-  padding-right: 18px;
-}
-
-html[dir="rtl"] .exp-certs li::before {
-  left: auto;
-  right: 0;
-}
-
-.exp-certs li:hover {
+.exp-certs-list li:hover .exp-cert-name {
   color: var(--ink);
+}
+
+.exp-cert-date {
+  font: 500 9px var(--font-m);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
 }
 
 .contact-main {
@@ -2821,19 +2849,29 @@ html[dir="rtl"] .exp-certs li::before {
     transform: none;
   }
 
-  .exp-item {
+  .exp-track {
     grid-template-columns: minmax(0, 1fr);
     gap: 18px;
   }
 
-  .exp-year {
+  .exp-track-head {
     flex-direction: row;
     align-items: baseline;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 12px 14px;
   }
 
-  .exp-year-tag {
+  .exp-track-tag {
     align-self: center;
+  }
+
+  .exp-track::before {
+    top: 52px;
+  }
+
+  .exp-certs-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 }
 
@@ -2872,8 +2910,8 @@ html[dir="rtl"] .exp-certs li::before {
     display: none;
   }
 
-  .exp-certs {
-    grid-template-columns: 1fr;
+  .exp-certs-list {
+    gap: 8px;
   }
 }
 
