@@ -47,7 +47,7 @@ html[lang="ar"] {
   --font-m: "Cairo", "DM Mono", ui-monospace, monospace;
 }
 
-html[lang="ar"] :is(.sec-label, .sec-note, .mile-num, .p-type, .stage-num, .stage-focus, .col-label, .ch-label, .eyebrow, .hero-meta, .skills-index, .eco-node-tag, .eco-node-sub, .case-meta, .cs-label, .contact-kicker, .status-line, .proj-hint, .scroll-text, .s-num, .cs-kicker) {
+html[lang="ar"] :is(.sec-label, .sec-note, .mile-num, .p-type, .stage-num, .stage-focus, .col-label, .ch-label, .eyebrow, .hero-meta, .skills-index, .eco-node-tag, .eco-node-sub, .case-meta, .cs-label, .contact-kicker, .status-line, .proj-hint, .scroll-text, .s-num, .cs-kicker, .exp-year-num, .exp-year-tag) {
   letter-spacing: 0;
 }
 
@@ -1154,6 +1154,7 @@ section {
 .projects,
 .journey,
 .pipeline,
+.experience,
 .contact {
   padding: clamp(96px, 12vh, 150px) 0;
   border-top: 1px solid var(--line);
@@ -1217,7 +1218,8 @@ section {
 }
 
 .about-title,
-.pipeline-title {
+.pipeline-title,
+.exp-title {
   margin: 0;
   font: 700 clamp(2.4rem, 6.2vw, 5.4rem) var(--font-d);
   line-height: 1.02;
@@ -1982,6 +1984,132 @@ html.js .mile.is-in {
   text-transform: uppercase;
 }
 
+.exp-title {
+  margin-bottom: clamp(48px, 7vh, 80px);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: clamp(160px, 22vw, 240px) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  padding: clamp(28px, 4vw, 46px) 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.exp-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.6s var(--ease);
+}
+
+.exp-item:hover::after {
+  width: 100%;
+}
+
+.exp-year {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-year-num {
+  font: 700 clamp(2.2rem, 4vw, 3.4rem) var(--font-d);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.exp-year-num-wide {
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  letter-spacing: 0.06em;
+}
+
+.exp-year-tag {
+  align-self: flex-start;
+  font: 500 8px var(--font-m);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--faint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 10px;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.exp-item:hover .exp-year-tag {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.exp-body h3 {
+  margin: 0 0 10px;
+  font: 700 clamp(1.4rem, 2.6vw, 2rem) var(--font-d);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.exp-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.exp-certs {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  max-width: 620px;
+}
+
+.exp-certs li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.exp-certs li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+html[dir="rtl"] .exp-certs li {
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+html[dir="rtl"] .exp-certs li::before {
+  left: auto;
+  right: 0;
+}
+
+.exp-certs li:hover {
+  color: var(--ink);
+}
+
 .contact-main {
   padding-top: clamp(12px, 3vw, 40px);
 }
@@ -2692,6 +2820,21 @@ html.js .mile.is-in {
   html.js .mile.is-in {
     transform: none;
   }
+
+  .exp-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .exp-year {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .exp-year-tag {
+    align-self: center;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2727,6 +2870,10 @@ html.js .mile.is-in {
 
   .sec-note {
     display: none;
+  }
+
+  .exp-certs {
+    grid-template-columns: 1fr;
   }
 }
 
